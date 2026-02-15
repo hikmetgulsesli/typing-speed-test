@@ -1,0 +1,56 @@
+# Progress Log - Typing Speed Test
+## Run ID: 00cad222-0a46-4955-a3a0-e34c09d735c9
+
+---
+
+## Codebase Patterns
+
+### Project Structure
+- React + Vite + TypeScript
+- Tests located in `src/__tests__/` and co-located with source files (`.test.ts`)
+- Utility functions in `src/utils/`
+- Vitest for testing
+
+### Testing Patterns
+- Use `describe` and `it` blocks from vitest
+- Import `{ describe, it, expect }` from "vitest"
+- Co-locate tests with source files using `.test.ts` suffix
+
+### TypeScript Patterns
+- Use explicit return types on exported functions
+- Use `as const` for constant objects
+- Export constants alongside functions for configuration
+
+---
+
+## Completed Stories
+
+### US-001: Setup design tokens and project configuration
+- Status: Complete
+- Design tokens configured in `src/styles/designTokens.ts`
+- Tests passing in `src/__tests__/design-tokens.test.ts`
+
+### US-002: Create test text generation utility
+- Status: Complete
+- Created `src/utils/textGenerator.ts` with 100+ word bank
+- Function `generateText(wordCount: number): string` implemented
+- Constants `TEXT_LENGTHS` exported for short (30), medium (60), long (100) passages
+- Tests created in `src/utils/textGenerator.test.ts` - all 11 tests passing
+- Typecheck passes
+- Build succeeds
+
+### US-003: Create WPM calculation utility
+- Status: Complete
+- Created `src/utils/wpmCalculator.ts` with `calculateWPM(charsTyped: number, timeMs: number): number`
+- Formula: (characters typed / 5) / (time in minutes)
+- Edge cases handled: zero time, zero/negative characters
+- Result rounded to nearest integer
+- Tests created in `src/__tests__/wpmCalculator.test.ts` - all 9 tests passing
+- Typecheck passes
+- Build succeeds
+
+---
+
+## Remaining Stories
+- 31 stories remaining
+
